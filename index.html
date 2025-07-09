@@ -217,36 +217,54 @@
                         <div class="item-header">
                             <div>
                                 <div class="item-title">資訊管理碩士</div>
-                                <div class="item-company">國立中央大學</div>
+                                <div class="item-company">國立中央大學
+                                    <img src="images/NCULogo.png" alt="學校" style="width: 30px; height: 30px; margin-right: 8px; vertical-align: bottom;">
+                                </div>
                             </div>
                             <div class="item-date">2021 - 2023</div>
                         </div>
-                        <div class="item-description-wrapper" id="desc">
-                            <div class="item-description">
-                                持續深入探索資訊管理的理論模型，強化軟體工程實作能力，並因應時代潮流積極學習深度學習與人工智慧相關技術。<br>
-                                <a href="https://hdl.handle.net/11296/pyx2e4" target="_blank">
-                                論文為「基於社群媒體使用者之硬體設備差異分析文本情緒強烈程度」，旨在探討
-                                </a>
+                        <div class="description-block">
+                            <div class="item-description-wrapper" id="desc">
+                                <div class="item-description">
+                                    持續深入探索資訊管理的理論模型，強化軟體工程實作能力，並因應時代潮流積極學習深度學習與人工智慧相關技術。<br><br>
+                                    論文為
+                                    <a href="https://hdl.handle.net/11296/pyx2e4" target="_blank">
+                                    「基於社群媒體使用者之硬體設備差異分析文本情緒強烈程度」
+                                    </a>
+                                    旨在運用網路爬蟲技術與文字情感分析（Sentiment Analysis）方法，探討社群平台使用者在不同裝置（手機與電腦）下的文字情感表達是否存在情感強度上的差異。
+                                    爬蟲技術使用到Python的Selenium套件，情感分析則是在做完文字前處理後利用蒙地卡羅抽樣方法再加上 Man-Whitney U 檢定及 Rank-biserial correlation 
+                                    效果值分析數值結果，最終結果顯示，手機與電腦使用者在文字情感強度上存在統計上的差異，但差異並未呈現穩定的方向性，
+                                    亦即並無哪一群體長期表現出較高的情感強度。
+                                </div>
+                                <!-- 文字區塊半透明遮罩 -->
+                                <div class="item-description-fade"></div>
                             </div>
-                            <!-- 文字區塊半透明遮罩 -->
-                            <div class="item-description-fade"></div>
+                            <div class="read-more-btn" onclick="toggleDescription(this)">展開全文</div>
                         </div>
-                        <div class="read-more-btn" onclick="toggleDescription()">展開全文</div>
                     </div>
                     <div class="education-item">
                         <div class="item-header">
                             <div>
                                 <div class="item-title">資訊管理學士</div>
-                                <div class="item-company">國立中正大學</div>
+                                <div class="item-company">國立中正大學
+                                    <img src="images/CCULogo.png" alt="學校" style="width: 30px; height: 30px; margin-right: 8px; vertical-align: bottom;">
+                                </div>
                             </div>
-                            <div class="item-date">2021 - 2023</div>
+                            <div class="item-date">2017 - 2021</div>
                         </div>
-                        <div class="item-description">
-                            學習程式設計、資料結構、演算法、資料庫設計等核心課程。
-                            參與學校的程式設計競賽，並擔任程式設計社團副社長。
-                            <a href="https://ndltd.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi/ccd=CMLB3K/record?r1=2&h1=0" target="_blank">
-                            「基於社群媒體使用者之硬體設備差異分析文本情緒強烈程度」
-                            </a>
+                        <div class="description-block">
+                            <div class="item-description-wrapper" id="desc">
+                                <div class="item-description">
+                                    學習程式設計、資料結構、演算法、資料庫設計等核心課程，並於大四時期提前選修研究所課程，激發了對資訊管理學問進一步探索的興趣，也因此在畢業前決定報考研究所。
+                                    <a href="#club-item" class="anchor-link">大學期間參與了多種社團</a>，培養個人興趣並提升軟實力。
+                                    三年級時期的畢業專題為4人一組，專題名稱為「食刻」，以聯合國SDGs的17項指標為主題發想，構築了一個可以提供民眾進行剩食分享的APP平台。平台使用Android Studio進行開發，資料庫採用雲端Firebase。
+                                        
+                                    <p>📄<a href="public/graduationProject_FoodTime.pdf" download>畢業專題報告下載</a></p>
+                                </div>
+                                <!-- 文字區塊半透明遮罩 -->
+                                <div class="item-description-fade"></div>
+                            </div>
+                            <div class="read-more-btn" onclick="toggleDescription(this)">展開全文</div>
                         </div>
                     </div>
                 </div>
@@ -254,7 +272,7 @@
                 <div class="section">
                     <h2><i class="fas fa-graduation-cap"></i> 社團經歷</h2>
                     
-                    <div class="club-item">
+                    <div class="club-item" id="club-item">
                         <div class="item-header">
                             <div>
                                 <div class="item-title">資訊管理所碩士</div>

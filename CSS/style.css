@@ -13,6 +13,7 @@ body {
     min-height: 100vh;
 }
 
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -154,6 +155,19 @@ body {
     background: #764ba2;
 }
 
+.anchor-link {
+    color: #007bff;
+    text-decoration: underline;
+    border-bottom: 1px dotted #007bff;
+    cursor: pointer;
+    text-decoration: none;
+}
+.anchor-link:hover {
+    color: #0056b3;
+    text-decoration: none;
+    border-bottom: 1px solid #0056b3;
+}
+
 .about-text {
     font-size: 1.1em;
     line-height: 1.8;
@@ -263,7 +277,7 @@ body {
 }
 .item-description-wrapper {
   position: relative;
-  max-height: 40px; /* 限制高度 */
+  max-height: 80px; /* 限制文字區塊高度 */
   overflow: hidden;
   transition: max-height 0.3s ease;
 }
