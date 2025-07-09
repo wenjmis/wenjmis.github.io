@@ -56,7 +56,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 function toggleDescription(button) {
 //   const wrapper = document.getElementById('desc');
   const wrapper = button.closest('.description-block').querySelector('.item-description-wrapper');
-  const btn = document.querySelector('.read-more-btn');
   wrapper.classList.toggle('expanded');
-  btn.textContent = wrapper.classList.contains('expanded') ? '收起內容' : '展開全文';
+  button.textContent = wrapper.classList.contains('expanded') ? '收起內容' : '展開全文';
 }

@@ -175,6 +175,11 @@ body {
     text-align: justify;
 }
 
+.about-text ul{
+    list-style-position: inside;
+}
+
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -222,7 +227,7 @@ body {
     transition: width 2s ease-out;
 }
 .skill-label {
-    width: 200px;         /* 固定寬度，確保每個文字區塊等寬 */
+    width: 100px;         /* 固定寬度，確保每個文字區塊等寬 */
     margin-right: 10px;  /* 與 skill-bar 間距 */
 }
 

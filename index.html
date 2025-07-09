@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 網站小圖示 -->
+    <link rel="icon" href="images/webIcon.png" type="image/x-icon"> 
     <title>個人履歷 - 劉文傑Jay Liu</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="CSS/style.css" />
@@ -18,8 +20,11 @@
                 <div class="title">軟體工程師 / 全端開發者</div>
                 <div class="contact-info">
                     <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=wenjliu29@gmail.com&su=來自個人履歷網站聯絡&body=您好：" target="_blank" class="social-link" style="font-size: 1em;">
+                            <i class="fas fa-envelope"></i>
+                        </a>
                         <span>wenjliu29@gmail.com</span>
+                        
                     </div>
                     <!-- <div class="contact-item">
                         <i class="fas fa-phone"></i>
@@ -30,7 +35,9 @@
                         <span>新北市汐止區</span>
                     </div>
                     <div class="contact-item">
-                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/wenjmis" target="_blank" class="social-link" style="font-size: 1em;">
+                            <i class="fab fa-github"></i>
+                        </a>
                         <span>github.com/wenjmis</span>
                     </div>
                 </div>
@@ -40,15 +47,8 @@
             <div class="main-content">
                 <!-- 關於我 -->
                 <div class="section">
-                    <h2><i class="fas fa-user"></i> 關於我</h2>
                     <!-- 匯入markdown自我介紹 -->
                     <div class="about-text" id="about-text">載入中...</div> 
-                    <!-- <div class="about-text">
-                        我是一位充滿熱忱的工程師，擁有1.5年的程式開發經驗。前端技術包括 Vue.js、JavaScript 等，
-                        後端技術則有Python、C#和MSSQL等。
-                        專注於創造符合使用需求的各項功能，並致力於編寫乾淨、可維護的程式碼。
-                        持續學習新技術，並樂於與團隊協作解決複雜的技術挑戰。
-                    </div> -->
                 </div>
 
                 <!-- 技能 -->
@@ -122,16 +122,18 @@
                         <div class="item-header">
                             <div>
                                 <div class="item-title">全端工程師</div>
-                                <div class="item-company">中華精測科技公司(CHPT)</div>
+                                <div class="item-company"><a href="https://www.cht-pt.com.tw/" style="color: inherit; text-decoration: none;">中華精測科技公司(CHPT)</a></div>
                             </div>
                             <div class="item-date">2023/9 - 2025/3</div>
                         </div>
                         <div class="item-description">
-                            <ul>
-                                <li>負責公司主要產品的前端開發，使用 Vue.js 和 Nuxt.js</li>
-                                <li>與 UI/UX 設計師密切合作，實現響應式網頁設計</li>
-                                <li>優化網站性能，提升載入速度 40%</li>
-                                <li>協助建立前端開發規範和最佳實踐</li>
+                            中華精測屬於半導體產業測試端，有獨立生產測試半導體成品之探針或探針卡的能力，並且也擁有PCB和ST的設計專業技術。
+                            <ul style="list-style-position: inside; margin-left: 0px;"><strong>工作大綱</strong>
+                                <li>開發 Python 自動化腳本，用於 SI/PI 模型參數設定與配置</li>
+                                <li>使用 Vue.js 構建前端介面，搭配 Flask 後端 API 開發完整 Web 應用</li>
+                                <li>負責資料庫設計、數據管理與效能分析</li>
+                                <li>建立程式碼版本控制流程，確保開發協作效率</li>
+                                <li>參與專案會議洽談需求同時管理專案進度</li>
                             </ul>
                         </div>
                     </div>
@@ -257,7 +259,9 @@
                                 <div class="item-description">
                                     學習程式設計、資料結構、演算法、資料庫設計等核心課程，並於大四時期提前選修研究所課程，激發了對資訊管理學問進一步探索的興趣，也因此在畢業前決定報考研究所。
                                     <a href="#club-item" class="anchor-link">大學期間參與了多種社團</a>，培養個人興趣並提升軟實力。
-                                    三年級時期的畢業專題為4人一組，專題名稱為「食刻」，以聯合國SDGs的17項指標為主題發想，構築了一個可以提供民眾進行剩食分享的APP平台。平台使用Android Studio進行開發，資料庫採用雲端Firebase。
+                                    三年級時期的畢業專題為4人一組，專題名稱為「食刻」，以聯合國SDGs的17項指標為主題發想，構築了一個可以提供民眾進行剩食分享的APP平台，民眾可以透過APP接受剩食
+                                    資訊的推播更新，促進民眾以折扣的方式取得剩食並讓業者可以有效地解決剩食問題，藉此達成雙贏局面。平台使用Android Studio進行開發，資料庫採用雲端Firebase，
+                                    即時對話的資料儲存使用到Firebase下的realtime database:FireStore。
                                         
                                     <p>📄<a href="public/graduationProject_FoodTime.pdf" download>畢業專題報告下載</a></p>
                                 </div>
@@ -269,38 +273,73 @@
                     </div>
                 </div>
                 <!-- 社團經歷 -->
-                <div class="section">
-                    <h2><i class="fas fa-graduation-cap"></i> 社團經歷</h2>
+                <div class="section" >
+                    <h2 ><i class="fas fa-users" ></i> 社團經歷</h2>
                     
                     <div class="club-item" id="club-item">
                         <div class="item-header">
                             <div>
-                                <div class="item-title">資訊管理所碩士</div>
-                                <div class="item-company">國立中央大學</div>
+                                <div class="item-title">資訊管理系學會會長</div>
                             </div>
-                            <div class="item-date">2021 - 2023</div>
+                            <div class="item-date">2018 - 2019</div>
                         </div>
                         <div class="item-description">
-                            主修資訊工程，學習程式設計、資料結構、演算法、資料庫設計等核心課程。
-                            參與學校的程式設計競賽，並擔任程式設計社團副社長。
+                            
+                            <details>
+                                <summary>擔任大學系學會會長，協助系上進行課堂資訊更新與通知，並與系學會成員一同完成一系列學期課外活動規劃和執行。</summary>
+                                <br>這段經歷不僅鍛鍊了我的領導能力與團隊合作精神，也培養了我的組織管理與溝通協調能力，在任期中我主動將系學會資源進行妥善重整，
+                                包含了系辦空間翻新、建立雲端儲存空間和歸檔活動企劃書，提供了學弟妹更好的發展空間。
+                            </details>  
+                        </div>
+                    </div>
+                    <div class="club-item" id="club-item">
+                        <div class="item-header">
+                            <div>
+                                <div class="item-title">校園親善大使</div>
+                            </div>
+                            <div class="item-date">2018 - 2020</div>
+                        </div>
+                        <div class="item-description">
+                            <details>
+                                <summary>作為親善大使團成員負責大學招攬學生之活動，內容包含校內導覽與系所介紹，此外也負責部分的外賓接待任務。</summary>
+                                <br>這個角色讓我有機會接觸不同背景的人士，提升了我的跨文化溝通能力與公眾表達技巧，也在培訓的過程中接受簡報表達的課程促進我的簡報設計能力。
+                            </details>  
+                        </div>
+                    </div>
+                    <div class="club-item" id="club-item">
+                        <div class="item-header">
+                            <div>
+                                <div class="item-title">資管系排球隊</div>
+                            </div>
+                            <div class="item-date">2017 - 2021</div>
+                        </div>
+                        <div class="item-description">
+                            參與大學系上排球隊4年養成規律的運動習慣
                         </div>
                     </div>
                 </div>
                 <!-- 額外成就 -->
                 <div class="section">
-                    <h2><i class="fas fa-graduation-cap"></i> 額外成就</h2>
+                <!-- 語言能力 -->
+                <div class="section">
+                    <h2><i class="fas fas fa-trophy"></i> 額外成就</h2>
                     
-                    <div class="achievement-item">
-                        <div class="item-header">
+                    <div class="achievement-item" style="padding-top: 10px; padding-bottom: 10px;">
+                        <div class="item-header" style="padding: 10px ; margin-bottom: 0px;">
                             <div>
-                                <div class="item-title">資訊管理所碩士</div>
+                                <div class="item-title">研究所書卷獎</div>
                                 <div class="item-company">國立中央大學</div>
                             </div>
-                            <div class="item-date">2021 - 2023</div>
+                            <div class="item-date">2022</div>
                         </div>
-                        <div class="item-description">
-                            主修資訊工程，學習程式設計、資料結構、演算法、資料庫設計等核心課程。
-                            參與學校的程式設計競賽，並擔任程式設計社團副社長。
+                    </div>
+                    <div class="achievement-item" style="padding-top: 10px; padding-bottom: 10px;">
+                        <div class="item-header" style="padding: 10px ; margin-bottom: 0px;">
+                            <div>
+                                <div class="item-title">系際盃排球錦標賽冠軍</div>
+                                <div class="item-company">國立中正大學</div>
+                            </div>
+                            <div class="item-date">2021</div>
                         </div>
                     </div>
                 </div>
@@ -311,12 +350,11 @@
     <!-- 底部 -->
     <div class="footer">
         <div class="social-links">
-            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/wenjmis" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/wenchieh-jay-liu-tw" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=wenjliu29@gmail.com&su=來自個人履歷網站聯絡&body=您好：" target="_blank" class="social-link" ><i class="fas fa-envelope"></i></a>
         </div>
-        <p>&copy; 2025 您的姓名. 保留所有權利.</p>
+        <p>&copy; 2025 作者劉文傑Jay. 保留所有權利.</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/markdown-it/dist/markdown-it.min.js"></script>
     <script src="js/main.js"></script>
