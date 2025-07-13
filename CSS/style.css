@@ -376,7 +376,9 @@ body {
     margin-bottom: 15px;
 }
 
+
 .project-links {
+    margin-top: 5px;
     display: flex;
     gap: 15px;
 }
