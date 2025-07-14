@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>正在啟動應用程式...</title>
+  <title>正在啟動...</title>
+    <!-- 網站favicon -->
+  <link rel="icon" href="https://fav.farm/⏳" />
   <style>
     body {
       font-family: sans-serif;
@@ -28,11 +30,30 @@
       0% { transform: rotate(0deg);}
       100% { transform: rotate(360deg);}
     }
+    .feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* 中央對齊 */
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    }
+
+
   </style>
 </head>
 <body>
-  <h2>🚀 正在啟動應用程式...</h2>
-  <p>這可能需要幾秒鐘，請稍候</p>
+    <h2>🚀 正在啟動線上展示網頁...</h2>
+    <p>這可能需要幾秒鐘，請稍候</p>
+    <p style="color: grey;">網站服務託管於Render，閒置15分鐘後需要等待冷啟動</p>
+    <div class="feature-description">
+        <h3>🌟 本網站特色功能：</h3>
+            <ul style="list-style-position: inside;" class="feature-list">
+                <li>🗂 任務完成標記</li>
+                <li>👥 多人協作</li>
+            </ul>
+    </div>
   <div class="spinner"></div>
 
   <script>
@@ -58,8 +79,11 @@
         document.body.innerHTML += "<p style='color:red'>應用啟動超時，請稍後再試。</p>";
       }
     }
-
-    checkServer();
+    setTimeout(() => {
+        window.location.href = targetUrl;
+        }, 200000); // 模擬等 5 秒才跳轉
+    // setTimeout();
+    // checkServer();
   </script>
 </body>
 </html>
