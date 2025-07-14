@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>正在啟動應用程式...</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f4f6fb;
+      text-align: center;
+      padding: 50px;
+    }
+    h2 {
+      color: #667eea;
+    }
+    .spinner {
+      margin-top: 30px;
+      border: 6px solid #ccc;
+      border-top: 6px solid #667eea;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      display: inline-block;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg);}
+      100% { transform: rotate(360deg);}
+    }
+  </style>
+</head>
+<body>
+  <h2>🚀 正在啟動應用程式...</h2>
+  <p>這可能需要幾秒鐘，請稍候</p>
+  <div class="spinner"></div>
+
+  <script>
+    const targetUrl = "https://tasksmanageronline.onrender.com";
+    const maxRetries = 30;
+    let tries = 0;
+
+    async function checkServer() {
+      try {
+        const res = await fetch(targetUrl, { mode: "no-cors" });
+        // 即使是 no-cors，Render 通常在 ready 後會回應 200 或 opaque，表示已啟動
+        if (res || res.type === "opaque") {
+          window.location.href = targetUrl;
+        }
+      } catch (e) {
+        // 忽略錯誤，繼續 retry
+      }
+
+      tries++;
+      if (tries < maxRetries) {
+        setTimeout(checkServer, 2000); // 每兩秒 retry
+      } else {
+        document.body.innerHTML += "<p style='color:red'>應用啟動超時，請稍後再試。</p>";
+      }
+    }
+
+    checkServer();
+  </script>
+</body>
+</html>
